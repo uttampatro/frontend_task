@@ -15,15 +15,6 @@
   border-radius: 25px;
 }
 
-.header {
-  border-radius: 25px 25px 0px 0px;
-  height: 60px;
-  background-color: rgb(232, 232, 232);
-  padding-top: 40px;
-  color: rgb(100, 83, 83);
-  padding-left: 200px;
-}
-
 .boxBody {
   position: absolute;
   border-radius: 0px 0px 25px 25px;
@@ -34,6 +25,15 @@
   overflow-y: auto;
   height: 390px;
   background-color: white;
+}
+
+.header {
+  border-radius: 25px 25px 0px 0px;
+  height: 60px;
+  background-color: rgb(232, 232, 232);
+  padding-top: 40px;
+  color: rgb(100, 83, 83);
+  padding-left: 200px;
 }
 
 .body {
@@ -59,4 +59,32 @@
 .image {
   height: 30px;
   border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .box {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 70%;
+  }
+  .boxBody {
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 80%;
+    overflow-y: auto;
+    background-color: white;
+  }
+  .header {
+    border-radius: 25px 25px 0px 0px;
+    height: 60px;
+    background-color: rgb(232, 232, 232);
+    padding-top: 40px;
+    color: rgb(100, 83, 83);
+    padding-left: 100px;
+  }
 }
