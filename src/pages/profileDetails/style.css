@@ -1,0 +1,129 @@
+.profileContainer {
+  height: 100vh;
+  display: flex;
+}
+
+.profileBox {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 100vh;
+  background-color: rgb(64, 90, 240);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 0px 25px 25px 0px;
+}
+
+.profileBody {
+  display: flex;
+  padding-top: 10px;
+  padding-left: 10px;
+  position: relative;
+  width: 70%;
+  top: 40%;
+  left: 10%;
+  padding-bottom: 8px;
+  border-bottom: 1px solid lightgray;
+}
+
+.profileBody > p {
+  cursor: pointer;
+  font-size: 16px;
+  padding-top: 4px;
+  text-align: center;
+}
+
+.active {
+  color: white;
+  font-weight: bold;
+}
+.inactive {
+  color: rgb(203, 200, 200);
+}
+
+.profileDetailsBody {
+  position: absolute;
+  top: 4%;
+  left: 24%;
+  width: 70%;
+  color: rgb(91, 88, 88);
+}
+
+.profileDetailsHeader {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 25px;
+  border-bottom: 1px solid lightgray;
+}
+
+.profileLogout {
+  display: flex;
+}
+.profileLogout > p {
+  padding-top: 4px;
+  padding-left: 10px;
+}
+
+/* image */
+
+.detailsPart1 {
+  position: absolute;
+  left: 5%;
+  width: 300px;
+  border-right: 1px solid lightgray;
+}
+
+.detailsPart2 {
+  position: absolute;
+  left: 40%;
+}
+
+.detailsPart1 > div > h3 {
+  padding-top: 10px;
+  padding-left: 10%;
+}
+
+.details {
+  padding-top: 30px;
+}
+
+.bigImage {
+  height: 200px;
+  border-radius: 50%;
+}
+
+.userDetails {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid lightgray;
+}
+.userDetails > h4 {
+  padding: 10px;
+  color: rgb(188, 184, 184);
+  font-weight: 400;
+  font-size: 15px;
+}
+.userDetails > h4 > span {
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.userCompany {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.userCompany > h4 {
+  padding: 10px;
+  color: rgb(188, 184, 184);
+  font-weight: 400;
+  font-size: 15px;
+}
+.userCompany > h4 > span {
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+}
