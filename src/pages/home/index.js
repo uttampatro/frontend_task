@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { fetchAllUser } from "../../services";
+import { Link } from "react-router-dom";
 import "./style.css";
 
 function Home() {
@@ -18,8 +19,6 @@ function Home() {
     getAllUser();
   }, []);
 
-  console.log(users);
-
   return (
     <div className="container">
       <div className="box">
@@ -27,10 +26,18 @@ function Home() {
         <div className="boxBody">
           {users.map((user) => {
             return (
-              <div className="body">
-                <img className="image" src={user.profilepicture} />
-                <p>{user.name}</p>
-              </div>
+              <Link
+                style={{
+                  textDecoration: "none",
+                  color: "black",
+                }}
+                to={`/profileDetails/${user?.id}`}
+              >
+                <div className="body">
+                  <img className="image" src={user.profilepicture} />
+                  <p>{user.name}</p>
+                </div>
+              </Link>
             );
           })}
         </div>

@@ -10,4 +10,13 @@ const fetchAllUser = async () => {
   }
 };
 
-export { fetchAllUser };
+const fetchUser = async() => {
+  try {
+    const response = await axios.get(`https://panorbit.in/api/users.json`);
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export { fetchAllUser, fetchUser };
