@@ -5,6 +5,8 @@ import { useParams } from "react-router-dom";
 import "./style.css";
 import UserData from "./component/UserData";
 import SideBar from "./component/SideBar";
+import Chat from "./component/Chat";
+import AllChats from "./component/AllChats";
 
 function ProfileDetails() {
   const [activeTab, setActiveTab] = useState("profile");
@@ -63,6 +65,9 @@ function ProfileDetails() {
           </div>
         </div>
       )}
+      <div className="chatFooter">
+        <AllChats user={user} />
+      </div>
     </div>
   );
 }
