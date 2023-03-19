@@ -36,19 +36,7 @@
   padding-left: 200px;
 }
 
-.body {
-  display: flex;
-  cursor: pointer;
-  padding-top: 10px;
-  padding-left: 10px;
-  position: relative;
-  width: 88%;
-  left: 5%;
-  overflow-y: auto;
-  padding-bottom: 8px;
-  border-bottom: 1px solid lightgray;
-}
-
+randomSubset
 .body > p {
   font-size: 16px;
   padding-left: 15px;

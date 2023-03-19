@@ -2,18 +2,15 @@ import React from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
-function UserData({ user }) {
-  const position = [
-    user.address?.geo?.lat ? user.address?.geo?.lat : 51.505,
-    user.address?.geo?.lng ? user.address?.geo?.lng : -0.09,
-  ];
+function UserData({ user, handleChatToggle }) {
+  const position = [51.505, -0.09];
 
   return (
     <div>
       <div className="profileDetailsBody">
         <div className="profileDetailsHeader">
           <h3>Profile</h3>
-          <div className="profileLogout">
+          <div onClick={handleChatToggle} className="profileLogout">
             <img className="image" src={user.profilepicture} />
             <p>{user.name}</p>
           </div>

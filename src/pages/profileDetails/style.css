@@ -59,6 +59,7 @@
 
 .profileLogout {
   display: flex;
+  cursor: pointer;
 }
 .profileLogout > p {
   padding-top: 4px;
@@ -163,7 +164,110 @@
   border-radius: 25px;
 }
 
+.modelShow1 {
+  display: none;
+}
+
+.modelShow {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 40%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 400px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 1000;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.modelShowImage {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 35%;
+  border-radius: 50%;
+}
+
+.modelBody {
+  padding-top: 40px;
+  padding-left: 90px;
+}
+
+.modelBody > h3 {
+  padding-top: 110px;
+  font-weight: 400;
+  font-size: large;
+}
+
+.modelBody > p {
+  padding-top: 10px;
+  padding-left: 10px;
+  color: gray;
+  font-size: small;
+}
+
+.modeBoxBody {
+  position: absolute;
+  padding-top: 200px;
+  padding-left: 40px;
+  height: 100px;
+}
+
+.body {
+  display: flex;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-left: 30px;
+  position: relative;
+  width: 100%;
+  left: 5%;
+  overflow-y: auto;
+  padding-bottom: 8px;
+  border-bottom: 1px solid lightgray;
+}
+
+.body > p {
+  padding-top: 5px;
+  padding-left: 10px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  padding-top: 130px;
+}
+
+.button > button {
+  height: 40px;
+  background-color: rgb(226, 65, 65);
+  width: 100px;
+  color: white;
+  font-size: large;
+  font-weight: 600;
+  border: 0px;
+  border-radius: 20px;
+}
+
 @media (max-width: 768px) {
+  .modelShow {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 52%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1000;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  }
   .map {
     height: 300px;
     width: 250px;
