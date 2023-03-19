@@ -252,7 +252,26 @@
   border-radius: 20px;
 }
 
+.detailsImage {
+  display: flex;
+  justify-content: center;
+  padding-top: 200px;
+}
+
+.detailsImg {
+  height: 300px;
+}
+
 @media (max-width: 768px) {
+  .detailsImage {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+  }
+
+  .detailsImg {
+    height: 150px;
+  }
   .modelShow {
     display: flex;
     flex-direction: column;

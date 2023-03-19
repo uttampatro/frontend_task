@@ -5,6 +5,7 @@ import "./style.css";
 import UserData from "./component/UserData";
 import SideBar from "./component/SideBar";
 import AllChats from "./component/AllChats";
+import image from "../../image.png";
 
 function ProfileDetails() {
   const [activeTab, setActiveTab] = useState("profile");
@@ -65,6 +66,9 @@ function ProfileDetails() {
               <p>{user.name}</p>
             </div>
           </div>
+          <div className="detailsImage">
+            <img className="detailsImg" src={image} />
+          </div>
         </div>
       )}
       {activeTab === "gallery" && (
@@ -76,6 +80,9 @@ function ProfileDetails() {
               <p>{user.name}</p>
             </div>
           </div>
+          <div className="detailsImage">
+            <img className="detailsImg" src={image} />
+          </div>
         </div>
       )}
       {activeTab === "todo" && (
@@ -86,6 +93,9 @@ function ProfileDetails() {
               <img className="image" src={user.profilepicture} />
               <p>{user.name}</p>
             </div>
+          </div>
+          <div className="detailsImage">
+            <img className="detailsImg" src={image} />
           </div>
         </div>
       )}
