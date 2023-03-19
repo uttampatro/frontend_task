@@ -95,6 +95,7 @@
 
 .userDetails {
   padding-top: 10px;
+  padding-left: 12px;
   padding-bottom: 20px;
   border-bottom: 1px solid lightgray;
 }
@@ -115,8 +116,16 @@
   padding-top: 10px;
   padding-bottom: 20px;
 }
+
+.userCompany > h5 {
+  padding-bottom: 10px;
+  color: rgb(188, 184, 184);
+  font-size: large;
+}
+
 .userCompany > h4 {
   padding: 10px;
+  padding-left: 20px;
   color: rgb(188, 184, 184);
   font-weight: 400;
   font-size: 15px;
@@ -148,3 +157,166 @@
   font-size: 10px;
 }
 
+.map {
+  height: 350px;
+  width: 600px;
+  border-radius: 25px;
+}
+
+@media (max-width: 768px) {
+  .map {
+    height: 300px;
+    width: 250px;
+    border-radius: 25px;
+  }
+  .profileBox {
+    display: flex;
+    position: absolute;
+    top: 10%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(64, 90, 240);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 25px 25px 25px 25px;
+  }
+
+  .profileBody {
+    display: flex;
+    padding-top: 10px;
+    padding-left: 10px;
+    position: relative;
+    width: 100%;
+    top: 40%;
+    left: 0%;
+    padding-bottom: 8px;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .profileBody > p {
+    cursor: pointer;
+    font-size: 16px;
+    padding-top: 4px;
+    text-align: center;
+  }
+
+  .active {
+    color: white;
+    font-weight: bold;
+  }
+  .inactive {
+    color: rgb(203, 200, 200);
+  }
+
+  .profileDetailsBody {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    width: 100%;
+    color: rgb(91, 88, 88);
+  }
+
+  .profileDetailsHeader {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .profileLogout {
+    display: flex;
+  }
+  .profileLogout > p {
+    padding-top: 4px;
+    padding-left: 10px;
+  }
+
+  /* image */
+
+  .detailsPart1 {
+    position: relative;
+    padding-left: 50px;
+    border-right: 0px solid lightgray;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .detailsPart2 {
+    position: relative;
+    left: 5%;
+    padding-left: 50px;
+  }
+
+  .detailsPart1 > div > h3 {
+    padding-top: 10px;
+    padding-left: 10%;
+  }
+
+  .details {
+    padding-top: 30px;
+  }
+
+  .bigImage {
+    height: 200px;
+    border-radius: 50%;
+  }
+
+  .userDetails {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-bottom: 0px solid lightgray;
+  }
+  .userDetails > h4 {
+    padding: 10px;
+    color: rgb(188, 184, 184);
+    font-weight: 400;
+    font-size: 15px;
+  }
+  .userDetails > h4 > span {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  .userCompany {
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+  .userCompany > h4 {
+    padding: 10px;
+    color: rgb(188, 184, 184);
+    font-weight: 400;
+    font-size: 15px;
+  }
+  .userCompany > h4 > span {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  .leaflet-control-attribution {
+    display: none !important;
+  }
+  .latitude {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .latitude > h5 {
+    padding: 10px;
+    color: rgb(188, 184, 184);
+    font-weight: 400;
+    font-size: 10px;
+  }
+  .latitude > h5 > span {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 10px;
+  }
+}

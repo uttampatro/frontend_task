@@ -81,3 +81,22 @@
   color: #fff;
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 185%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 400px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1000;
+    border: 1px solid rgb(64, 90, 240);
+  }
+ 
+}

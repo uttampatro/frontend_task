@@ -49,7 +49,7 @@ function AllChats({ user }) {
           }}
         />
       </div>
-      <div className={`${isChatOpen ? "allChatShow" : ""}`}>
+      <div className={`${isChatOpen ? "allChatShow" : "allChatNotShow"}`}>
         <div className="allChat-header" onClick={handleChatToggle}>
           <p>Chats</p>
           <KeyboardArrowDownIcon

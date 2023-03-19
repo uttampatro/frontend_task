@@ -39,7 +39,7 @@ function UserData({ user }) {
               </h4>
             </div>
             <div className="userCompany">
-              <h5>Address</h5>
+              <h5>Company</h5>
               <h4>
                 Name : <span>{user.company?.name}</span>
               </h4>
@@ -53,7 +53,7 @@ function UserData({ user }) {
           </div>
           <div className="detailsPart2">
             <div className="userCompany">
-              <h5>Company</h5>
+              <h5>Address</h5>
               <h4>
                 Street : <span>{user.address?.street}</span>
               </h4>
@@ -67,15 +67,7 @@ function UserData({ user }) {
                 Zipcode : <span>{user.address?.zipcode}</span>
               </h4>
             </div>
-            <MapContainer
-              center={position}
-              zoom={13}
-              style={{
-                height: "350px",
-                width: "600px",
-                borderRadius: "25px",
-              }}
-            >
+            <MapContainer center={position} zoom={13} className="map">
               <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
               <Marker position={position}></Marker>
             </MapContainer>
