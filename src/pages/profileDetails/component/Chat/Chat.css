@@ -11,22 +11,7 @@
   border-radius: 10px;
   overflow: hidden;
   z-index: 1000;
-}
-
-.chat {
-  display: flex;
-  position: absolute;
-  top: 95%;
-  left: 65%;
-  transform: translate(-50%, -50%);
-  width: 210px;
-  height: 20px;
-  padding: 16px;
-  padding-top: 10px;
-  background-color: rgb(64, 90, 240);
-  border-radius: 10px;
-  overflow: hidden;
-  z-index: 1000;
+  border: 1px solid rgb(64, 90, 240);
 }
 
 .chat > p {
@@ -45,14 +30,16 @@
   display: flex;
   background-color: rgb(64, 90, 240);
   padding: 16px;
-  padding-top: 10px;
+  padding-right: 5px;
 
+  padding-top: 10px;
   height: 20px;
   border-bottom: 1px solid #ccc;
 }
 
 .chat-header > p {
-  padding-top: 4px;
+  padding-top: 7px;
+  font-size: 12px;
   padding-left: 10px;
   color: white;
   font-weight: 400;

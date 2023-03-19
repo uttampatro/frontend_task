@@ -3,7 +3,7 @@ import { fetchAllUser } from "../../../../services";
 import Chat from "../Chat";
 import "./AllChat.css";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
 function AllChats({ user }) {
   const [isChatOpen, setIsChatOpen] = useState(false);
@@ -28,9 +28,11 @@ function AllChats({ user }) {
   }, []);
 
   const [isOpen, setIsOpen] = useState(false);
+  const [selectedUserId, setSelectedUserId] = useState(null);
 
-  const handleChatOpenToggle = () => {
-    setIsOpen((prevState) => !prevState);
+  const handleChatOpenToggle = (userId) => {
+    setIsOpen(true);
+    setSelectedUserId(userId);
   };
 
   return (
@@ -38,13 +40,14 @@ function AllChats({ user }) {
       <div className="allChat" onClick={handleChatToggle}>
         <p>Chats</p>
         <KeyboardArrowUpIcon
-        style={{
+          style={{
             cursor: "pointer",
             height: "20px",
             paddingTop: "2px",
             color: "white",
             paddingLeft: "150px",
-          }} />
+          }}
+        />
       </div>
       <div className={`${isChatOpen ? "allChatShow" : ""}`}>
         <div className="allChat-header" onClick={handleChatToggle}>
@@ -67,7 +70,10 @@ function AllChats({ user }) {
         >
           {users.map((user) => {
             return (
-              <div onClick={handleChatOpenToggle} className="allChat_Body">
+              <div
+                onClick={() => handleChatOpenToggle(user.id)}
+                className="allChat_Body"
+              >
                 <div className="allChat_Body1">
                   <img className="image" src={user.profilepicture} />
                   <p>{user.name}</p>
@@ -82,7 +88,16 @@ function AllChats({ user }) {
         </div>
       </div>
       <div>
-        <Chat user={user} isOpen={isOpen} setIsOpen={setIsOpen} />
+        {selectedUserId && (
+          <div>
+            <Chat
+              selectedUserId={selectedUserId}
+              setSelectedUserId={setSelectedUserId}
+              isOpen={isOpen}
+              setIsOpen={setIsOpen}
+            />
+          </div>
+        )}
       </div>
     </div>
   );

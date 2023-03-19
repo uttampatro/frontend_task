@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { fetchUser } from "../../services";
 import { useParams } from "react-router-dom";
-
 import "./style.css";
 import UserData from "./component/UserData";
 import SideBar from "./component/SideBar";

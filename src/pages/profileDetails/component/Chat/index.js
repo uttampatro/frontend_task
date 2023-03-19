@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Chat.css";
 import CloseIcon from "@mui/icons-material/Close";
+import { fetchUser } from "../../../../services";
 
-function Chat({ user, isOpen, setIsOpen }) {
+function Chat({ selectedUserId, setSelectedUserId, isOpen, setIsOpen }) {
+  const [user, setUser] = useState({});
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
 
@@ -12,20 +14,39 @@ function Chat({ user, isOpen, setIsOpen }) {
     setMessage("");
   };
 
+  const getUser = async () => {
+    try {
+      const data = await fetchUser();
+      console.log(selectedUserId);
+      const foundUser = data.users.find((u) => u.id === selectedUserId);
+      setUser(foundUser);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getUser();
+  }, []);
+
+  const handleChatOpenToggle = () => {
+    setIsOpen(false);
+    setSelectedUserId(null);
+  };
   return (
     <div>
       <div className={`${isOpen ? "show" : ""}`}>
         <div className="chat-header">
           <img className="image" src={user.profilepicture} />
           <p>{user.name}</p>
-          <div onClick={() => setIsOpen(false)}>
+          <div onClick={() => handleChatOpenToggle()}>
             <CloseIcon
               style={{
                 cursor: "pointer",
                 height: "20px",
                 paddingTop: "5px",
                 color: "white",
-                paddingLeft: "30px",
+                paddingLeft: "60px",
               }}
             />
           </div>
